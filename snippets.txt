@@ -86,11 +86,10 @@
     {trigger: "par", replacement: "\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2", options: "m"},
 	{trigger: "dpar", replacement: "\\frac{ \\partial^2 ${0:y} }{ \\partial ${1:x}^2 } $2", options: "m"},
     {trigger: "grad", replacement: "\\nabla ", options: "mA"},
-    {trigger: "curl", replacement: "\\nabla \\times \\mathbf{$0}", options: "mA"},
-    {trigger: "dcurl", replacement: "\\nabla \\times \\nabla \\times \\mathbf{$0}", options: "mA"},
-	{trigger: "div", replacement: "\\nabla \\cdot \\mathbf{$0}", options: "mA"},
+    {trigger: "curl", replacement: "\\nabla \\times ", options: "mA"},
+    {trigger: "dcurl", replacement: "\\nabla \\times \\nabla \\times ", options: "mA"},
+	{trigger: "div", replacement: "\\nabla \\cdot ", options: "mA"},
 	{trigger: "lapl", replacement: "\\nabla^2 ", options: "mA"},
-	{trigger: "vlapl", replacement: "\\nabla^2 \\mathbf{$0}", options: "mA"},
 
     {trigger: /pa([A-Za-z])([A-Za-z])/, replacement: "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ", options: "rm"},
 
@@ -104,8 +103,8 @@
     {trigger: "iiint", replacement: "\\iiint", options: "mA"},
     
     {trigger: "cint", replacement: "\\oint_{${0:C}} $1 \\cdot d${2:\\mathbf{l}}", options: "mA"},
-    {trigger: "sint", replacement: "\\iint_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}", options: "mA"},
-    {trigger: "osint", replacement: "\\oiint_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}", options: "mA"},
+    {trigger: "Sint", replacement: "\\iint_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}", options: "mA"},
+    {trigger: "oSint", replacement: "{\\huge\\unicode{x222F}}_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}", options: "mA"},
     {trigger: "vint", replacement: "\\iiint_{${0:V}} $1 \\cdot d${2:v}", options: "mA"},
 
     {trigger: "uint", replacement: "\\int_{0}^{\\infty} $0 \\, d${1:x} $2", options: "mA"},
@@ -220,9 +219,8 @@
 	{trigger: "<<", replacement: "\\ll", options: "mA"},
 	{trigger: "simm", replacement: "\\sim", options: "mA"},
 	{trigger: "sim=", replacement: "\\simeq", options: "mA"},
-	{trigger: "simas", replacement: "\\overset{$0}{\simeq} $1", options: "mA"},
+	{trigger: "simas", replacement: "\\overset{$0}{\\simeq} $1", options: "mA"},
     {trigger: "prop", replacement: "\\propto", options: "mA"},
-
 
     {trigger: "<->", replacement: "\\leftrightarrow ", options: "mA"},
 	{trigger: "->", replacement: "\\to", options: "mA"},
