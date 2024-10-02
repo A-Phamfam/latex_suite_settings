@@ -84,11 +84,13 @@ if __name__ == "__main__":
         
     snippets = parse_snippets(snippet_data)
     markdown_output = generate_markdown(snippets)
-    
+
     # Output to a Markdown file
-    output_file = "LaTeX_Snippets_Cheatsheet.md"
+    output_file = "README.md"
     try:
         with open(output_file, "w") as md_file:
+            with open("readme_header.md", "r") as header_file:
+                md_file.write(header_file.read())
             md_file.write("# LaTeX Snippets Cheatsheet\n\n")
             md_file.write(markdown_output)
         
