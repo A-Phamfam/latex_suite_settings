@@ -121,11 +121,10 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `par` | `\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2` | `m` |  |
 | `dpar` | `\\frac{ \\partial^2 ${0:y} }{ \\partial ${1:x}^2 } $2` | `m` |  |
 | `grad` | `\\nabla ` | `mA` |  |
-| `curl` | `\\nabla \\times \\mathbf{$0}` | `mA` |  |
-| `dcurl` | `\\nabla \\times \\nabla \\times \\mathbf{$0}` | `mA` |  |
-| `div` | `\\nabla \\cdot \\mathbf{$0}` | `mA` |  |
+| `curl` | `\\nabla \\times ` | `mA` |  |
+| `dcurl` | `\\nabla \\times \\nabla \\times ` | `mA` |  |
+| `div` | `\\nabla \\cdot ` | `mA` |  |
 | `lapl` | `\\nabla^2 ` | `mA` |  |
-| `vlapl` | `\\nabla^2 \\mathbf{$0}` | `mA` |  |
 | `pa([A-Za-z])([A-Za-z])` | `\\frac{ \\partial [[0]] }{ \\partial [[1]] } ` | `rm` |  |
 
 ---
@@ -140,8 +139,8 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `iint` | `\\iint` | `mA` |  |
 | `iiint` | `\\iiint` | `mA` |  |
 | `cint` | `\\oint_{${0:C}} $1 \\cdot d${2:\\mathbf{l}}` | `mA` |  |
-| `sint` | `\\iint_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}` | `mA` |  |
-| `osint` | `\\oiint_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}` | `mA` |  |
+| `Sint` | `\\iint_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}` | `mA` |  |
+| `oSint` | `{\\huge\\unicode{x222F}}_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}` | `mA` |  |
 | `vint` | `\\iiint_{${0:V}} $1 \\cdot d${2:v}` | `mA` |  |
 | `uint` | `\\int_{0}^{\\infty} $0 \\, d${1:x} $2` | `mA` |  |
 | `tint` | `\\int_{-\\infty}^{\\infty} $0 \\, d${1:x} $2` | `mA` |  |
@@ -277,7 +276,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `<<` | `\\ll` | `mA` |  |
 | `simm` | `\\sim` | `mA` |  |
 | `sim=` | `\\simeq` | `mA` |  |
-| `simas` | `\\overset{$0}{\simeq} $1` | `mA` |  |
+| `simas` | `\\overset{$0}{\\simeq} $1` | `mA` |  |
 | `prop` | `\\propto` | `mA` |  |
 | `<->` | `\\leftrightarrow ` | `mA` |  |
 | `->` | `\\to` | `mA` |  |
