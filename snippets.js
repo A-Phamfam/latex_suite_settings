@@ -273,6 +273,16 @@
 
 
     // Visual operations
+{
+        trigger: "A", 
+        replacement: (sel) => {
+          // Replace the first occurrence of '=' with '&=' in the selected text
+          sel = sel.replace("=", "&=");
+          return `\\begin{align}\n ${sel}\\\\ \n $0 \n\\end{align}`;
+        },
+        options: "mv"
+      },
+
 	{trigger: "U", replacement: "\\underbrace{ ${VISUAL} }_{ $0 }", options: "mA"},
 	{trigger: "O", replacement: "\\overbrace{ ${VISUAL} }^{ $0 }", options: "mA"},
 	{trigger: "B", replacement: "\\underset{ $0 }{ ${VISUAL} }", options: "mA"},
