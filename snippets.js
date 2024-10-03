@@ -42,7 +42,6 @@
 	{trigger: "@u", replacement: "\\theta", options: "mA"},
 	{trigger: "@U", replacement: "\\Theta", options: "mA"},
 	{trigger: ":u", replacement: "\\vartheta", options: "mA"},
-	{trigger: "ow", replacement: "\\omega", options: "mA"},
 	{trigger: "@w", replacement: "\\omega", options: "mA"},
 	{trigger: "@W", replacement: "\\Omega", options: "mA"},
 	{trigger: "@x", replacement: "\\chi", options: "mA"},
@@ -50,6 +49,9 @@
 	{trigger: "@y", replacement: "\\upsilon", options: "mA"},
 	{trigger: "@Y", replacement: "\\Upsilon", options: "mA"},
 	{trigger: "@z", replacement: "\\zeta", options: "mA"},
+    
+    {trigger: "eps", replacement: "\\varepsilon", options: "mA"},
+	{trigger: "ow", replacement: "\\omega", options: "mA"},
 
     // Text environment
     {trigger: "text", replacement: "\\text{$0}$1", options: "mA"},
@@ -112,15 +114,19 @@
 	{trigger: "tint", replacement: "\\int_{-\\infty}^{\\infty} $0 \\, d${1:x} $2", options: "mA"},
 
 	// Electromagnetics
-	{trigger: "E([xyz]) ", replacement: "E_[[0]] ", options: "rmA"},
-	{trigger: "H([xyz]) ", replacement: "H_[[0]] ", options: "rmA"},
-{trigger: "k([xyz]) ", replacement: "k_[[0]] ", options: "rmA"},
-	{trigger: "E([itr]) ", replacement: "\\mathbf{E}^[[0]] ", options: "rmA"},
-	{trigger: "H([itr]) ", replacement: "\\mathbf{H}^[[0]] ", options: "rmA"},
-{trigger: "k([itr]) ", replacement: "\\mathbf{k}^[[0]] ", options: "rmA"},
-	{trigger: "E([itr])([xyz]) ", replacement: "E_[[1]]^[[0]] ", options: "rmA"},
-	{trigger: "H([itr])([xyz]) ", replacement: "H_[[1]]^[[0]] ", options: "rmA"},
-{trigger: "k([itr])([xyz]) ", replacement: "k_[[1]]^[[0]] ", options: "rmA"},
+	{trigger: "jw", replacement: "j\\omega ", options: "mA"},
+	{trigger: "er", replacement: "\\varepsilon_{r}", options: "rmA"},
+	{trigger: "mr", replacement: "\\mu_{r}", options: "rmA"},
+
+	{trigger: "E([xyz])\\1", replacement: "E_[[0]] ", options: "rmA"},
+	{trigger: "H([xyz])\\1", replacement: "H_[[0]] ", options: "rmA"},
+	{trigger: "k([xyz])\\1", replacement: "k_[[0]] ", options: "rmA"},
+	{trigger: "E([itr])\\1", replacement: "\\mathbf{E}^[[0]] ", options: "rmA"},
+	{trigger: "H([itr])\\1", replacement: "\\mathbf{H}^[[0]] ", options: "rmA"},
+	{trigger: "k([itr])\\1", replacement: "\\mathbf{k}^[[0]] ", options: "rmA"},
+	{trigger: "E([itr])([xyz])", replacement: "E_[[1]]^[[0]] ", options: "rmA"},
+	{trigger: "H([itr])([xyz])", replacement: "H_[[1]]^[[0]] ", options: "rmA"},
+	{trigger: "k([itr])([xyz])", replacement: "k_[[1]]^[[0]] ", options: "rmA"},
 
 	// Special Functions
 	{trigger: "Jbes(\d|n|m|p)", replacement: "J_[[0]] ($0) $1", options: "rmA"},
