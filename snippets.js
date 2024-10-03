@@ -42,6 +42,7 @@
 	{trigger: "@u", replacement: "\\theta", options: "mA"},
 	{trigger: "@U", replacement: "\\Theta", options: "mA"},
 	{trigger: ":u", replacement: "\\vartheta", options: "mA"},
+	{trigger: "ow", replacement: "\\omega", options: "mA"},
 	{trigger: "@w", replacement: "\\omega", options: "mA"},
 	{trigger: "@W", replacement: "\\Omega", options: "mA"},
 	{trigger: "@x", replacement: "\\chi", options: "mA"},
