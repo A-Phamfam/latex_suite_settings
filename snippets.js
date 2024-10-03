@@ -104,8 +104,8 @@
     
     {trigger: "cint", replacement: "\\oint_{${0:C}} $1 \\cdot d${2:\\mathbf{l}}", options: "mA"},
     {trigger: "Sint", replacement: "\\iint_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}", options: "mA"},
-    {trigger: "oSint", replacement: "{\\huge\\unicode{x222F}}_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}", options: "mA"},
-    {trigger: "vint", replacement: "\\iiint_{${0:V}} $1 d${2:v}", options: "mA"},
+    {trigger: "oSint", replacement: "{\\huge∯}_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}", options: "mA"},
+    {trigger: "vint", replacement: "\\iiint_{${0:V}} $1 \ d${2:v}", options: "mA"},
 
     {trigger: "uint", replacement: "\\int_{0}^{\\infty} $0 \\, d${1:x} $2", options: "mA"},
 	{trigger: "tint", replacement: "\\int_{-\\infty}^{\\infty} $0 \\, d${1:x} $2", options: "mA"},
