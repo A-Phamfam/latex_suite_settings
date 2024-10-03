@@ -114,10 +114,13 @@
 	// Electromagnetics
 	{trigger: "E([xyz]) ", replacement: "E_[[0]] ", options: "rmA"},
 	{trigger: "H([xyz]) ", replacement: "H_[[0]] ", options: "rmA"},
+{trigger: "k([xyz]) ", replacement: "k_[[0]] ", options: "rmA"},
 	{trigger: "E([itr]) ", replacement: "\\mathbf{E}^[[0]] ", options: "rmA"},
 	{trigger: "H([itr]) ", replacement: "\\mathbf{H}^[[0]] ", options: "rmA"},
+{trigger: "k([itr]) ", replacement: "\\mathbf{k}^[[0]] ", options: "rmA"},
 	{trigger: "E([itr])([xyz]) ", replacement: "E_[[1]]^[[0]] ", options: "rmA"},
 	{trigger: "H([itr])([xyz]) ", replacement: "H_[[1]]^[[0]] ", options: "rmA"},
+{trigger: "k([itr])([xyz]) ", replacement: "k_[[1]]^[[0]] ", options: "rmA"},
 
 	// Special Functions
 	{trigger: "Jbes(\d|n|m|p)", replacement: "J_[[0]] ($0) $1", options: "rmA"},
