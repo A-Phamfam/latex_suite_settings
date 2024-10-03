@@ -50,6 +50,7 @@
 	{trigger: "@Y", replacement: "\\Upsilon", options: "mA"},
 	{trigger: "@z", replacement: "\\zeta", options: "mA"},
     
+    {trigger: "sig", replacement: "\\sigma", options: "mA"},
     {trigger: "eps", replacement: "\\varepsilon", options: "mA"},
 	{trigger: "ow", replacement: "\\omega", options: "mA"},
 
