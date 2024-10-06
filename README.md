@@ -66,6 +66,9 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `@y` | `\\upsilon` | `mA` |  |
 | `@Y` | `\\Upsilon` | `mA` |  |
 | `@z` | `\\zeta` | `mA` |  |
+| `sig` | `\\sigma` | `mA` |  |
+| `eps` | `\\varepsilon` | `mA` |  |
+| `ow` | `\\omega` | `mA` |  |
 
 ---
 
@@ -85,13 +88,13 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `sr` | `^{2}` | `mA` |  |
 | `cb` | `^{3}` | `mA` |  |
 | `rd` | `^{$0}$1` | `mA` |  |
-| `_` | `_{$0}$1` | `mA` |  |
+| `__` | `_{$0}$1` | `mA` |  |
 | `sts` | `_\\text{$0}` | `mA` |  |
 | `sq` | `\\sqrt{ $0 }$1` | `mA` |  |
 | `` | `\\frac{$0}{$1}$2` | `mA` |  |
-| `ee` | `e^{ $0 }$1` | `mA` |  |
-| `ej` | `e^{j $0 }$1` | `mA` |  |
-| `en` | `e^{-j $0 }$1` | `mA` |  |
+| `ee` | `e^{\\Huge $0 }$1` | `mA` |  |
+| `ej` | `e^{\\Huge j $0 }$1` | `mA` |  |
+| `en` | `e^{\\Huge -j $0 }$1` | `mA` |  |
 | `sn` | `^{-}$1` | `mA` |  |
 | `sp` | `^{+}$1` | `mA` |  |
 | `invs` | `^{-1}` | `mA` |  |
@@ -134,14 +137,14 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | **Trigger** | **Replacement** | **Options** | **Description** |
 |-------------|-----------------|-------------|-----------------|
 | `\\int` | `\\int $0 \\, d${1:x} $2` | `m` |  |
-| `dint` | `\\int_{${0:0}}^{${1:1}} $2 \\, d${3:x} $4` | `mA` |  |
+| `dint` | `\\int_{${0:0}}^{${1:1}} $3 \\, d${2:x} $4` | `mA` |  |
 | `oint` | `\\oint` | `mA` |  |
 | `iint` | `\\iint` | `mA` |  |
 | `iiint` | `\\iiint` | `mA` |  |
 | `cint` | `\\oint_{${0:C}} $1 \\cdot d${2:\\mathbf{l}}` | `mA` |  |
 | `Sint` | `\\iint_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}` | `mA` |  |
-| `oSint` | `{\\huge\\unicode{x222F}}_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}` | `mA` |  |
-| `vint` | `\\iiint_{${0:V}} $1 \\cdot d${2:v}` | `mA` |  |
+| `oSint` | `{\\huge∯}_{${0:S}} $1 \\cdot d${2:\\mathbf{s}}` | `mA` |  |
+| `vint` | `\\iiint_{${0:V}} $1 \ d${2:v}` | `mA` |  |
 | `uint` | `\\int_{0}^{\\infty} $0 \\, d${1:x} $2` | `mA` |  |
 | `tint` | `\\int_{-\\infty}^{\\infty} $0 \\, d${1:x} $2` | `mA` |  |
 
@@ -151,12 +154,18 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 
 | **Trigger** | **Replacement** | **Options** | **Description** |
 |-------------|-----------------|-------------|-----------------|
-| `E([xyz]) ` | `E_[[0]] ` | `rmA` |  |
-| `H([xyz]) ` | `H_[[0]] ` | `rmA` |  |
-| `E([itr]) ` | `\\mathbf{E}^[[0]] ` | `rmA` |  |
-| `H([itr]) ` | `\\mathbf{H}^[[0]] ` | `rmA` |  |
-| `E([itr])([xyz]) ` | `E_[[1]]^[[0]] ` | `rmA` |  |
-| `H([itr])([xyz]) ` | `H_[[1]]^[[0]] ` | `rmA` |  |
+| `jw` | `j\\omega ` | `mA` |  |
+| `er` | `\\varepsilon_{r}` | `rmA` |  |
+| `mr` | `\\mu_{r}` | `rmA` |  |
+| `E([xyz])\\1` | `E_[[0]] ` | `rmA` |  |
+| `H([xyz])\\1` | `H_[[0]] ` | `rmA` |  |
+| `k([xyz])\\1` | `k_[[0]] ` | `rmA` |  |
+| `E([itr])\\1` | `\\mathbf{E}^[[0]] ` | `rmA` |  |
+| `H([itr])\\1` | `\\mathbf{H}^[[0]] ` | `rmA` |  |
+| `k([itr])\\1` | `\\mathbf{k}^[[0]] ` | `rmA` |  |
+| `E([itr])([xyz])` | `E_[[1]]^[[0]] ` | `rmA` |  |
+| `H([itr])([xyz])` | `H_[[1]]^[[0]] ` | `rmA` |  |
+| `k([itr])([xyz])` | `k_[[1]]^[[0]] ` | `rmA` |  |
 
 ---
 
@@ -262,8 +271,13 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `+-` | `\\pm` | `mA` |  |
 | `-+` | `\\mp` | `mA` |  |
 | `...` | `\\dots` | `mA` |  |
-| `nabl` | `\\nabla` | `mA` |  |
-| `del` | `\\nabla` | `mA` |  |
+
+---
+
+## {trigger: "del", replacement: "\\nabla", options: "mA"},
+
+| **Trigger** | **Replacement** | **Options** | **Description** |
+|-------------|-----------------|-------------|-----------------|
 | `xx` | `\\times` | `mA` |  |
 | `**` | `\\cdot` | `mA` |  |
 | `para` | `\\parallel` | `mA` |  |
@@ -319,7 +333,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 
 ---
 
-## Visual operations
+## Replace the first occurrence of '=' with '&=' in the selected text
 
 | **Trigger** | **Replacement** | **Options** | **Description** |
 |-------------|-----------------|-------------|-----------------|
@@ -394,9 +408,10 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | **Trigger** | **Replacement** | **Options** | **Description** |
 |-------------|-----------------|-------------|-----------------|
 | `avg` | `\\langle $0 \\rangle $1` | `mA` |  |
+| `abs` | `\\left\| $0 \\right\| $1` | `mA` |  |
 | `ceil` | `\\lceil $0 \\rceil $1` | `mA` |  |
 | `floor` | `\\lfloor $0 \\rfloor $1` | `mA` |  |
-| `mod` | `\|$0\|$1` | `mA` |  |
+| `\|` | `\\left\|${VISUAL} \\right\|` | `mA` |  |
 | `(` | `(${VISUAL})` | `mA` |  |
 | `[` | `[${VISUAL}]` | `mA` |  |
 | `{` | `{${VISUAL}}` | `mA` |  |
