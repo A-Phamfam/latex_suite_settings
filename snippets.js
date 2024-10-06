@@ -341,6 +341,7 @@
 
     // Brackets
 	{trigger: "avg", replacement: "\\langle $0 \\rangle $1", options: "mA"},
+	{trigger: "abs", replacement: "\\left| $0 \\right| $1", options: "mA"},
 	{trigger: "norm", replacement: "\\lvert $0 \\rvert $1", options: "mA", priority: 1},
 	{trigger: "Norm", replacement: "\\lVert $0 \\rVert $1", options: "mA", priority: 1},
 	{trigger: "ceil", replacement: "\\lceil $0 \\rceil $1", options: "mA"},
