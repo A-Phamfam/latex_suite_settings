@@ -86,17 +86,18 @@
     {trigger: "trace", replacement: "\\mathrm{Tr}", options: "mA"},
 
     // # Derivatives
-    {trigger: "ddt", replacement: "\\frac{d}{dt} ", options: "mA"},
+    {trigger: "sdd([txyz])", replacement: "\\frac{d^2}{d [[0]]^2} ", options: "rmA"},
+    {trigger: "dd([txyz])", replacement: "\\frac{d}{d [[0]]} ", options: "rmA"},
+    {trigger: "pp([txyz])", replacement: "\\frac{ \\partial}{ \\partial [[0]] } ", options: "rmA"},
+    {trigger: "spp([txyz])", replacement: "\\frac{ \\partial^2}{ \\partial [[0]]^2 } ", options: "rmA"},
     {trigger: "par", replacement: "\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2", options: "m"},
-	{trigger: "dpar", replacement: "\\frac{ \\partial^2 ${0:y} }{ \\partial ${1:x}^2 } $2", options: "m"},
+	{trigger: "spar", replacement: "\\frac{ \\partial^2 ${0:y} }{ \\partial ${1:x}^2 } $2", options: "m"},
     {trigger: "tgrad", replacement: "\\nabla_t ", options: "mA"},
     {trigger: "grad", replacement: "\\nabla ", options: "mA"},
     {trigger: "curl", replacement: "\\nabla \\times ", options: "mA"},
     {trigger: "dcurl", replacement: "\\nabla \\times \\nabla \\times ", options: "mA"},
 	{trigger: "div", replacement: "\\nabla \\cdot ", options: "mA"},
 	{trigger: "lapl", replacement: "\\nabla^2 ", options: "mA"},
-
-    {trigger: /pa([A-Za-z])([A-Za-z])/, replacement: "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ", options: "rm"},
 
 	// # Integrals
     {trigger: /([^\\])int/, replacement: "[[0]]\\int", options: "mA", priority: -1},
