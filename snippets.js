@@ -162,7 +162,7 @@
 	{trigger: "\\\\(${GREEK}),\\.", replacement: "\\boldsymbol{\\[[0]]}", options: "rmA"},
 	{trigger: "\\\\(${GREEK})\\.,", replacement: "\\boldsymbol{\\[[0]]}", options: "rmA"},
 
-	{trigger: "bas", replacement: "\\hat{\\mathbf{$0}}$1", options: "mA"},
+	{trigger: "hat", replacement: "\\hat{\\mathbf{$0}}$1", options: "mA"},
 	// {trigger: "bas", replacement: "\\hat{\\mathbf{$0}}$1", options: "mA"},
 	// {trigger: "bss", replacement: "\\hat{\\mathbf{a}}_{$0}$1", options: "mA"},
 	// {trigger: "hat", replacement: "\\hat{$0}$1", options: "mA"},
@@ -181,7 +181,7 @@
 	{trigger: "\\\\(${GREEK}|${SYMBOL}) cb", replacement: "\\[[0]]^{3}", options: "rmA"},
 	{trigger: "\\\\(${GREEK}|${SYMBOL}) rd", replacement: "\\[[0]]^{$0}$1", options: "rmA"},
 	
-	{trigger: "\\\\(${GREEK}|${SYMBOL}) bas", replacement: "\\hat{\\mathbf{\\[[0]]}}", options: "rmA"},
+	{trigger: "\\\\(${GREEK}|${SYMBOL}) hat", replacement: "\\hat{\\mathbf{\\[[0]]}}", options: "rmA"},
 	// {trigger: "\\\\(${GREEK}|${SYMBOL}) bas", replacement: "\\hat{\\mathbf{\\[[0]]}}", options: "rmA"},
 	// {trigger: "\\\\(${GREEK}|${SYMBOL}) bss", replacement: "\\hat{\\mathbf{a}}_{\\[[0]]}", options: "rmA"},
 	// {trigger: "\\\\(${GREEK}|${SYMBOL}) hat", replacement: "\\hat{\\[[0]]}", options: "rmA"},
