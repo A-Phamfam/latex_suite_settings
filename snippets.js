@@ -52,7 +52,7 @@
     
     {trigger: "sig", replacement: "\\sigma", options: "mA"},
     {trigger: "eps", replacement: "\\varepsilon", options: "mA"},
-	{trigger: "ow", replacement: "\\omega", options: "mA"},
+	{trigger: "ww", replacement: "\\omega", options: "mA"},
 
     // # Text environment
     {trigger: "text", replacement: "\\text{$0}$1", options: "mA"},
