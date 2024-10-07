@@ -6,7 +6,7 @@ from collections import defaultdict
 def parse_snippets(data):
     snippets = []
     current_category = "Uncategorized"
-    category_pattern = re.compile(r'//\s*(.+)')
+    category_pattern = re.compile(r'// # \s*(.+)')
     snippet_pattern = re.compile(
         r'\{trigger:\s*(?P<trigger>".+?"|/.+?/),\s*replacement:\s*(?P<replacement>".+?"|/.+?/),\s*options:\s*"(?P<options>[^"]+)"(?:,\s*description:\s*"(?P<description>[^"]+)")?\}'
     )

@@ -1,15 +1,15 @@
 [
-    // Math mode
+    // # Math mode
 	{trigger: "mk", replacement: "$$0$", options: "tA"},
 	{trigger: "dk", replacement: "$$\n$0\n$$", options: "tAw"},
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
 
-    // Dashes
+    // # Dashes
 	// {trigger: "--", replacement: "–", options: "tA"},
 	// {trigger: "–-", replacement: "—", options: "tA"},
 	// {trigger: "—-", replacement: "---", options: "tA"},
 
-    // Greek letters
+    // # Greek letters
 	{trigger: "@a", replacement: "\\alpha", options: "mA"},
 	{trigger: "@b", replacement: "\\beta", options: "mA"},
 	{trigger: "@c", replacement: "\\psi", options: "mA"},
@@ -54,11 +54,11 @@
     {trigger: "eps", replacement: "\\varepsilon", options: "mA"},
 	{trigger: "ow", replacement: "\\omega", options: "mA"},
 
-    // Text environment
+    // # Text environment
     {trigger: "text", replacement: "\\text{$0}$1", options: "mA"},
     {trigger: "\"", replacement: "\\text{$0}$1", options: "mA"},
 
-    // Basic operations
+    // # Basic operations
     {trigger: "sr", replacement: "^{2}", options: "mA"},
 	{trigger: "cb", replacement: "^{3}", options: "mA"},
 	{trigger: "rd", replacement: "^{$0}$1", options: "mA"},
@@ -81,11 +81,11 @@
     {trigger: "bf", replacement: "\\mathbf{$0}", options: "mA"},
 	{trigger: "rm", replacement: "\\mathrm{$0}$1", options: "mA"},
 
-    // Linear algebra
+    // # Linear algebra
     {trigger: /([^\\])(det)/, replacement: "[[0]]\\[[1]]", options: "rmA"},
     {trigger: "trace", replacement: "\\mathrm{Tr}", options: "mA"},
 
-    // Derivatives
+    // # Derivatives
     {trigger: "ddt", replacement: "\\frac{d}{dt} ", options: "mA"},
     {trigger: "par", replacement: "\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2", options: "m"},
 	{trigger: "dpar", replacement: "\\frac{ \\partial^2 ${0:y} }{ \\partial ${1:x}^2 } $2", options: "m"},
@@ -98,7 +98,7 @@
 
     {trigger: /pa([A-Za-z])([A-Za-z])/, replacement: "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ", options: "rm"},
 
-	// Integrals
+	// # Integrals
     {trigger: /([^\\])int/, replacement: "[[0]]\\int", options: "mA", priority: -1},
     {trigger: "\\int", replacement: "\\int $0 \\, d${1:x} $2", options: "m"},
 
@@ -115,7 +115,7 @@
     {trigger: "uint", replacement: "\\int_{0}^{\\infty} $0 \\, d${1:x} $2", options: "mA"},
 	{trigger: "tint", replacement: "\\int_{-\\infty}^{\\infty} $0 \\, d${1:x} $2", options: "mA"},
 
-	// Electromagnetics
+	// # Electromagnetics
 	{trigger: "jw", replacement: "j\\omega ", options: "mA"},
 	{trigger: "er", replacement: "\\varepsilon_{r}", options: "rmA"},
 	{trigger: "mr", replacement: "\\mu_{r}", options: "rmA"},
@@ -130,7 +130,7 @@
 	{trigger: "H([itr])([xyz])", replacement: "H_[[1]]^[[0]] ", options: "rmA"},
 	{trigger: "k([itr])([xyz])", replacement: "k_[[1]]^[[0]] ", options: "rmA"},
 
-	// Special Functions
+	// # Special Functions
 	{trigger: "Jbes(\d|n|m|p)", replacement: "J_[[0]] ($0) $1", options: "rmA"},
 	{trigger: "Ybes(\d|n|m|p)", replacement: "Y_[[0]] ($0) $1", options: "rmA"},
 	{trigger: "jbes(\d|n|m|p)", replacement: "j_[[0]] ($0) $1", options: "rmA"},
@@ -144,7 +144,7 @@
 	{trigger: "2hank(\d|n|m|p)", replacement: "h_[[0]]^{(2)} ($0) $1", options: "rmA"},
 	{trigger: "1hank(\d|n|m|p)", replacement: "h_[[0]]^{(1)} ($0) $1", options: "rmA"},
 
-    // More operations
+    // # More operations
 	{trigger: "([a-zA-Z])hat", replacement: "\\hat{\\mathbf{[[0]]}}", options: "rmA"},
 	// {trigger: "([a-zA-Z])bas", replacement: "\\hat{\\mathbf{[[0]]}}", options: "rmA"},
 	// {trigger: "([a-zA-Z])bss", replacement: "\\hat{\\mathbf{a}}_[[0]] ", options: "rmA"},
@@ -174,7 +174,7 @@
 	{trigger: "und", replacement: "\\underline{$0}$1", options: "mA"},
 	{trigger: "vec", replacement: "\\vec{$0}$1", options: "mA"},
 
-    // Insert space after Greek letters and symbols
+    // # Insert space after Greek letters and symbols
 	{trigger: "\\\\(${GREEK}|${SYMBOL}|${MORE_SYMBOLS})([A-Za-z])", replacement: "\\[[0]] [[1]]", options: "rmA"},
 	{trigger: "\\\\(${GREEK}|${SYMBOL}) sr", replacement: "\\[[0]]^{2}", options: "rmA"},
 	{trigger: "\\\\(${GREEK}|${SYMBOL}) cb", replacement: "\\[[0]]^{3}", options: "rmA"},
@@ -192,7 +192,7 @@
 	{trigger: "\\\\(${GREEK}|${SYMBOL}) und", replacement: "\\underline{\\[[0]]}", options: "rmA"},
 
 
-    // More auto letter subscript
+    // # More auto letter subscript
     {trigger: /([A-Za-z])_(\d\d)/, replacement: "[[0]]_{[[1]]}", options: "rmA"},
 	{trigger: /\\hat{([A-Za-z])}(\d)/, replacement: "\\hat{[[0]]}_{[[1]]}", options: "rmA"},
 	{trigger: /\\vec{([A-Za-z])}(\d)/, replacement: "\\vec{[[0]]}_{[[1]]}", options: "rmA"},
@@ -209,7 +209,7 @@
 	{trigger: "yii", replacement: "y_{i}", options: "mA"},
 	{trigger: "yjj", replacement: "y_{j}", options: "mA"},
 
-    // Symbols
+    // # Symbols
     {trigger: "inf", replacement: "\\infty", options: "mA"},
 	{trigger: "sum", replacement: "\\sum", options: "mA"},
 	{trigger: "prod", replacement: "\\prod", options: "mA"},
@@ -262,7 +262,7 @@
 	{trigger: "ZZ", replacement: "\\mathbb{Z}", options: "mA"},
 	{trigger: "NN", replacement: "\\mathbb{N}", options: "mA"},
 
-    // Handle spaces and backslashes
+    // # Handle spaces and backslashes
 
     // Snippet variables can be used as shortcuts when writing snippets.
     // For example, ${GREEK} below is shorthand for "alpha|beta|gamma|Gamma|delta|..."
@@ -283,7 +283,7 @@
      description: "Add space after hyperbolic trig funcs"},
 
 
-    // Visual operations
+    // # Visual operations
 {
         trigger: "A", 
         replacement: (sel) => {
@@ -302,11 +302,11 @@
 	{trigger: "S", replacement: "\\sqrt{ ${VISUAL} }", options: "mA"},
 
 
-    // Physics
+    // # Physics
 	{trigger: "kbt", replacement: "k_{B}T", options: "mA"},
 	{trigger: "msun", replacement: "M_{\\odot}", options: "mA"},
 
-    // Quantum mechanics
+    // # Quantum mechanics
     {trigger: "dag", replacement: "^{\\dagger}", options: "mA"},
 	{trigger: "o+", replacement: "\\oplus ", options: "mA"},
 	{trigger: "ox", replacement: "\\otimes ", options: "mA"},
@@ -315,7 +315,7 @@
 	{trigger: "brk", replacement: "\\braket{ $0 | $1 } $2", options: "mA"},
     {trigger: "outer", replacement: "\\ket{${0:\\psi}} \\bra{${0:\\psi}} $1", options: "mA"},
 
-    // Chemistry
+    // # Chemistry
 	{trigger: "pu", replacement: "\\pu{ $0 }", options: "mA"},
 	{trigger: "cee", replacement: "\\ce{ $0 }", options: "mA"},
 	{trigger: "he4", replacement: "{}^{4}_{2}He ", options: "mA"},
@@ -323,7 +323,7 @@
 	{trigger: "iso", replacement: "{}^{${0:4}}_{${1:2}}${2:He}", options: "mA"},
 
 
-    // Environments
+    // # Environments
 	{trigger: "pmat", replacement: "\\begin{pmatrix}\n$0\n\\end{pmatrix}", options: "MA"},
 	{trigger: "bmat", replacement: "\\begin{bmatrix}\n$0\n\\end{bmatrix}", options: "MA"},
 	{trigger: "Bmat", replacement: "\\begin{Bmatrix}\n$0\n\\end{Bmatrix}", options: "MA"},
@@ -343,7 +343,7 @@
 	{trigger: "array", replacement: "\\begin{array}\n$0\n\\end{array}", options: "mA"},
 
 
-    // Brackets
+    // # Brackets
 	{trigger: "avg", replacement: "\\langle $0 \\rangle $1", options: "mA"},
 	{trigger: "abs", replacement: "\\left| $0 \\right| $1", options: "mA"},
 	{trigger: "norm", replacement: "\\lvert $0 \\rvert $1", options: "mA", priority: 1},

@@ -18,7 +18,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | **Trigger** | **Replacement** | **Options** | **Description** |
 |-------------|-----------------|-------------|-----------------|
 | `mk` | `$$0$` | `tA` |  |
-| `dm` | `$$\n$0\n$$` | `tAw` |  |
+| `dk` | `$$\n$0\n$$` | `tAw` |  |
 | `beg` | `\\begin{$0}\n$1\n\\end{$0}` | `mA` |  |
 
 ---
@@ -123,6 +123,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `ddt` | `\\frac{d}{dt} ` | `mA` |  |
 | `par` | `\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2` | `m` |  |
 | `dpar` | `\\frac{ \\partial^2 ${0:y} }{ \\partial ${1:x}^2 } $2` | `m` |  |
+| `tgrad` | `\\nabla_t ` | `mA` |  |
 | `grad` | `\\nabla ` | `mA` |  |
 | `curl` | `\\nabla \\times ` | `mA` |  |
 | `dcurl` | `\\nabla \\times \\nabla \\times ` | `mA` |  |
@@ -192,10 +193,8 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 
 | **Trigger** | **Replacement** | **Options** | **Description** |
 |-------------|-----------------|-------------|-----------------|
-| `([a-zA-Z])bas` | `\\hat{\\mathbf{[[0]]}}` | `rmA` |  |
-| `([a-zA-Z])bss` | `\\hat{\\mathbf{a}}_[[0]] ` | `rmA` |  |
+| `([a-zA-Z])hat` | `\\hat{\\mathbf{[[0]]}}` | `rmA` |  |
 | `([a-zA-Z])tens` | `\\overline{\\overline{[[0]]}}` | `rmA` |  |
-| `([a-zA-Z])hat` | `\\hat{[[0]]}` | `rmA` |  |
 | `([a-zA-Z])bar` | `\\bar{[[0]]}` | `rmA` |  |
 | `([a-zA-Z])tilde` | `\\tilde{[[0]]}` | `rmA` |  |
 | `([a-zA-Z])und` | `\\underline{[[0]]}` | `rmA` |  |
@@ -205,9 +204,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `\\\\(${GREEK}),\\.` | `\\boldsymbol{\\[[0]]}` | `rmA` |  |
 | `\\\\(${GREEK})\\.,` | `\\boldsymbol{\\[[0]]}` | `rmA` |  |
 | `bas` | `\\hat{\\mathbf{$0}}$1` | `mA` |  |
-| `bss` | `\\hat{\\mathbf{a}}_{$0}$1` | `mA` |  |
 | `tens` | `\\overline{\\overline{$0}}$1` | `mA` |  |
-| `hat` | `\\hat{$0}$1` | `mA` |  |
 | `bar` | `\\bar{$0}$1` | `mA` |  |
 | `ddot` | `\\ddot{$0}$1` | `mA` |  |
 | `cdot` | `\\cdot` | `mA` |  |
@@ -226,9 +223,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `\\\\(${GREEK}\|${SYMBOL}) cb` | `\\[[0]]^{3}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) rd` | `\\[[0]]^{$0}$1` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) bas` | `\\hat{\\mathbf{\\[[0]]}}` | `rmA` |  |
-| `\\\\(${GREEK}\|${SYMBOL}) bss` | `\\hat{\\mathbf{a}}_{\\[[0]]}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) tens` | `\\overline{\\overline{\\[[0]]}}` | `rmA` |  |
-| `\\\\(${GREEK}\|${SYMBOL}) hat` | `\\hat{\\[[0]]}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) dot` | `\\dot{\\[[0]]}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) bar` | `\\bar{\\[[0]]}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) vec` | `\\vec{\\[[0]]}` | `rmA` |  |
@@ -271,13 +266,6 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `+-` | `\\pm` | `mA` |  |
 | `-+` | `\\mp` | `mA` |  |
 | `...` | `\\dots` | `mA` |  |
-
----
-
-## {trigger: "del", replacement: "\\nabla", options: "mA"},
-
-| **Trigger** | **Replacement** | **Options** | **Description** |
-|-------------|-----------------|-------------|-----------------|
 | `xx` | `\\times` | `mA` |  |
 | `**` | `\\cdot` | `mA` |  |
 | `para` | `\\parallel` | `mA` |  |
@@ -316,24 +304,17 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 
 ---
 
-## You can edit snippet variables under the Advanced snippet settings section.
+## Handle spaces and backslashes
 
 | **Trigger** | **Replacement** | **Options** | **Description** |
 |-------------|-----------------|-------------|-----------------|
 | `([^\\\\])(${GREEK})` | `[[0]]\\[[1]]` | `rmA` | Add backslash before Greek letters |
 | `([^\\\\])(${SYMBOL})` | `[[0]]\\[[1]]` | `rmA` | Add backslash before symbols |
-
----
-
-## Trigonometry
-
-| **Trigger** | **Replacement** | **Options** | **Description** |
-|-------------|-----------------|-------------|-----------------|
 | `([^\\])(arcsin\|sin\|arccos\|cos\|arctan\|tan\|csc\|sec\|cot)` | `[[0]]\\[[1]]` | `rmA` | Add backslash before trig funcs |
 
 ---
 
-## Replace the first occurrence of '=' with '&=' in the selected text
+## Visual operations
 
 | **Trigger** | **Replacement** | **Options** | **Description** |
 |-------------|-----------------|-------------|-----------------|
@@ -423,13 +404,6 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `lr[` | `\\left[ $0 \\right] $1` | `mA` |  |
 | `lr\|` | `\\left\| $0 \\right\| $1` | `mA` |  |
 | `lra` | `\\left< $0 \\right> $1` | `mA` |  |
-
----
-
-## Snippet replacements can have placeholders.
-
-| **Trigger** | **Replacement** | **Options** | **Description** |
-|-------------|-----------------|-------------|-----------------|
 | `tayl` | `${0:f}(${1:x} + ${2:h}) = ${0:f}(${1:x}) + ${0:f}'(${1:x})${2:h} + ${0:f}''(${1:x}) \\frac{${2:h}^{2}}{2!} + \\dots$3` | `mA` | Taylor expansion |
 
 ---
