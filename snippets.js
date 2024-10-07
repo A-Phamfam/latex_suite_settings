@@ -89,6 +89,7 @@
     {trigger: "ddt", replacement: "\\frac{d}{dt} ", options: "mA"},
     {trigger: "par", replacement: "\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2", options: "m"},
 	{trigger: "dpar", replacement: "\\frac{ \\partial^2 ${0:y} }{ \\partial ${1:x}^2 } $2", options: "m"},
+    {trigger: "tgrad", replacement: "\\nabla_t ", options: "mA"},
     {trigger: "grad", replacement: "\\nabla ", options: "mA"},
     {trigger: "curl", replacement: "\\nabla \\times ", options: "mA"},
     {trigger: "dcurl", replacement: "\\nabla \\times \\nabla \\times ", options: "mA"},
