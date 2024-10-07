@@ -86,12 +86,11 @@
     {trigger: "trace", replacement: "\\mathrm{Tr}", options: "mA"},
 
     // # Derivatives
-    {trigger: "sdd([txyz])", replacement: "\\frac{d^2}{d [[0]]^2} ", options: "rmA"},
     {trigger: "dd([txyz])", replacement: "\\frac{d}{d [[0]]} ", options: "rmA"},
-    {trigger: "pp([txyz])", replacement: "\\frac{ \\partial}{ \\partial [[0]] } ", options: "rmA"},
-    {trigger: "spp([txyz])", replacement: "\\frac{ \\partial^2}{ \\partial [[0]]^2 } ", options: "rmA"},
-    {trigger: "par", replacement: "\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2", options: "m"},
-	{trigger: "spar", replacement: "\\frac{ \\partial^2 ${0:y} }{ \\partial ${1:x}^2 } $2", options: "m"},
+    {trigger: "ddd([txyz])", replacement: "\\frac{d^2}{d [[0]]^2} ", options: "rmA"},
+    {trigger: "par([txyz])", replacement: "\\frac{ \\partial}{ \\partial [[0]] } ", options: "rmA"},
+    {trigger: "dpar([txyz])", replacement: "\\frac{ \\partial^2}{ \\partial [[0]]^2 } ", options: "rmA"},
+    {trigger: "?p", replacement: "\\partial ", options: "mA"},
     {trigger: "tgrad", replacement: "\\nabla_t ", options: "mA"},
     {trigger: "grad", replacement: "\\nabla ", options: "mA"},
     {trigger: "curl", replacement: "\\nabla \\times ", options: "mA"},
