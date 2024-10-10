@@ -381,6 +381,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `matrix` | `\\begin{matrix}$0\\end{matrix}` | `nA` |  |
 | `cases` | `\\begin{cases}\n$0\n\\end{cases}` | `mA` |  |
 | `align` | `\\begin{align}\n$0\n\\end{align}` | `mA` |  |
+| `gath` | `\\begin{gather}\n$0\n\\end{gather}` | `mA` |  |
 | `array` | `\\begin{array}\n$0\n\\end{array}` | `mA` |  |
 
 ---
