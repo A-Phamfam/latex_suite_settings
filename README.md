@@ -68,7 +68,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `@z` | `\\zeta` | `mA` |  |
 | `sig` | `\\sigma` | `mA` |  |
 | `eps` | `\\varepsilon` | `mA` |  |
-| `ow` | `\\omega` | `mA` |  |
+| `ww` | `\\omega` | `mA` |  |
 
 ---
 
@@ -120,16 +120,17 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 
 | **Trigger** | **Replacement** | **Options** | **Description** |
 |-------------|-----------------|-------------|-----------------|
-| `ddt` | `\\frac{d}{dt} ` | `mA` |  |
-| `par` | `\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2` | `m` |  |
-| `dpar` | `\\frac{ \\partial^2 ${0:y} }{ \\partial ${1:x}^2 } $2` | `m` |  |
+| `dd([txyz])` | `\\frac{d}{d [[0]]} ` | `rmA` |  |
+| `ddd([txyz])` | `\\frac{d^2}{d [[0]]^2} ` | `rmA` |  |
+| `par([txyz])` | `\\frac{ \\partial}{ \\partial [[0]] } ` | `rmA` |  |
+| `dpar([txyz])` | `\\frac{ \\partial^2}{ \\partial [[0]]^2 } ` | `rmA` |  |
+| `?p` | `\\partial` | `mA` |  |
 | `tgrad` | `\\nabla_t ` | `mA` |  |
 | `grad` | `\\nabla ` | `mA` |  |
 | `curl` | `\\nabla \\times ` | `mA` |  |
 | `dcurl` | `\\nabla \\times \\nabla \\times ` | `mA` |  |
 | `div` | `\\nabla \\cdot ` | `mA` |  |
 | `lapl` | `\\nabla^2 ` | `mA` |  |
-| `pa([A-Za-z])([A-Za-z])` | `\\frac{ \\partial [[0]] }{ \\partial [[1]] } ` | `rm` |  |
 
 ---
 
@@ -203,7 +204,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `([a-zA-Z])\\.,` | `\\mathbf{[[0]]}` | `rmA` |  |
 | `\\\\(${GREEK}),\\.` | `\\boldsymbol{\\[[0]]}` | `rmA` |  |
 | `\\\\(${GREEK})\\.,` | `\\boldsymbol{\\[[0]]}` | `rmA` |  |
-| `bas` | `\\hat{\\mathbf{$0}}$1` | `mA` |  |
+| `hat` | `\\hat{\\mathbf{$0}}$1` | `mA` |  |
 | `tens` | `\\overline{\\overline{$0}}$1` | `mA` |  |
 | `bar` | `\\bar{$0}$1` | `mA` |  |
 | `ddot` | `\\ddot{$0}$1` | `mA` |  |
@@ -222,7 +223,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `\\\\(${GREEK}\|${SYMBOL}) sr` | `\\[[0]]^{2}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) cb` | `\\[[0]]^{3}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) rd` | `\\[[0]]^{$0}$1` | `rmA` |  |
-| `\\\\(${GREEK}\|${SYMBOL}) bas` | `\\hat{\\mathbf{\\[[0]]}}` | `rmA` |  |
+| `\\\\(${GREEK}\|${SYMBOL}) hat` | `\\hat{\\mathbf{\\[[0]]}}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) tens` | `\\overline{\\overline{\\[[0]]}}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) dot` | `\\dot{\\[[0]]}` | `rmA` |  |
 | `\\\\(${GREEK}\|${SYMBOL}) bar` | `\\bar{\\[[0]]}` | `rmA` |  |
@@ -266,7 +267,7 @@ Refer to the [Obsidian Latex Suite documentation](https://github.com/artisticat1
 | `+-` | `\\pm` | `mA` |  |
 | `-+` | `\\mp` | `mA` |  |
 | `...` | `\\dots` | `mA` |  |
-| `xx` | `\\times` | `mA` |  |
+| `([^\\\\{])xx` | `[[0]]\\times` | `rmA` |  |
 | `**` | `\\cdot` | `mA` |  |
 | `para` | `\\parallel` | `mA` |  |
 | `perp` | `\\perp` | `mA` |  |
