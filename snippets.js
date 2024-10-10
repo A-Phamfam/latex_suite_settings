@@ -221,7 +221,7 @@
     {trigger: "...", replacement: "\\dots", options: "mA"},
     // {trigger: "nabl", replacement: "\\nabla", options: "mA"},
 	// {trigger: "del", replacement: "\\nabla", options: "mA"},
-    {trigger: "[^\\{]xx", replacement: "\\times", options: "rmA"},
+    {trigger: "([^\\\\{])xx", replacement: "[[0]]\\times", options: "rmA"},
     {trigger: "**", replacement: "\\cdot", options: "mA"},
     {trigger: "para", replacement: "\\parallel", options: "mA"},
     {trigger: "perp", replacement: "\\perp", options: "mA"},
